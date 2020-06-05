@@ -27,9 +27,15 @@ urlpatterns = [
     path('api/rest-auth/', include('rest_auth.urls')),
     path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
 
-    # API endpoint
+    # API login 
+    path('api-auth/', include('rest_framework.urls')),
+
+    # API user endpoint
     path('api/', include('users.api.urls')),
 
-    # Vue endpoint
+    # API job endpoint
+    path('api/', include('jobs.api.urls')),
+
+    # App endpoint
     path('', IndexTemplateView.as_view(), name='entry-point')
 ]

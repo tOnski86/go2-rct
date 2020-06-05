@@ -25,6 +25,7 @@ SECRET_KEY = 'kdhrxfw_gjtu227%&#m%9r4%+wn-)4nl=dtt)y!mo@etm&@s-@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ngrok http port
 ALLOWED_HOSTS = []
 
 
@@ -51,7 +52,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
-    'users'
+    'users',
+    'jobs'
 ]
 
 MIDDLEWARE = [
